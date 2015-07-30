@@ -11,16 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150723164338) do
+ActiveRecord::Schema.define(version: 20150730135516) do
 
-  create_table "tweets", force: :cascade do |t|
-    t.string  "status"
-    t.integer "user_id"
+  create_table "chores", force: :cascade do |t|
+    t.string  "name"
+    t.integer "parent_id"
   end
 
-  create_table "users", force: :cascade do |t|
+  create_table "kids", force: :cascade do |t|
+    t.string  "name"
+    t.integer "parent_id"
+    t.integer "score"
+  end
+
+  create_table "parents", force: :cascade do |t|
     t.string "name"
-    t.string "email"
   end
 
 end

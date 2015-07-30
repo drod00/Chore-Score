@@ -1,6 +1,86 @@
-<h1>Tweets!</h1>
-  <% @tweets.each do |tweet| %>  
-<p><strong><%= tweet.user.name %></strong>: <%= tweet.status %></p>
-<% end %>
-    
+<nav>
+  <li><h1> ChoreTracker </h1>
+  <img id="clipboard2" src="images/clipboard.png">
+  
+</nav>
+   
 
+<form class="content" id="send_kid" action="/kid" method="POST">
+<li><a href='/add_kid'>
+     <div id="add_kid_link">
+      
+       <img src="images/pencil.png"><p style="font: 2em 'Oswald', sans-serif;"> Add kid to choretracker
+       </p>
+     </div></a>
+  </li>
+</form>
+<form class="content" id="send_chore" action="/chore" method="POST">
+  
+  <li><a href='/add_chore'>
+     <div id="add_chore_link">
+       
+       <img src="images/pencil.png"><p style="font: 2em 'Oswald', sans-serif;"> Add chore to choretracker
+      
+     </div></a>
+  </li>
+  <br>
+</form>
+  <h2> create or find chore: </h2>
+  
+  
+ <form class="content" action="/results" method="POST"> 
+  
+    <p style="font: 2em 'Oswald', sans-serif;">kids name:
+      <select class="text" name="kids">
+        <% @kids.each do |kid| %>
+        <option value="<%= kid.id %>"><%= kid.name %></option>
+        <% end %>
+      </select>
+    </p>
+  
+   <p style="font: 2em 'Oswald', sans-serif;">chore:
+    <select class="text" chore="chores">
+      <% @chores.each do |chore| %>
+      <option value="<%= chore.id %>"><%= chore.name %></option>
+      <% end %>
+    </select>
+  </p>
+  
+  
+  <p style="font: 2em 'Oswald', sans-serif;">score:
+ 
+<select class="text" score="scores">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  
+</select>
+    
+  </p>
+
+  <input class="submit" type="submit" class="btn btn-primary">  
+ </form>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>

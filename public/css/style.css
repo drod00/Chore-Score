@@ -1,1 +1,164 @@
-style.css
+.container {
+  
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-right: 0;
+  margin-left: 0;
+  width: 99vw;
+  max-width: 100vw;
+}
+
+a {
+
+  font-family: 'Lato' sans-serif;
+  color: black;
+}
+
+a:hover {
+  
+  font: none thin 'Oswald' sans-serif;
+  color: blue;
+  text-decoration: none;
+  border-bottom: solid 1px blue;
+}
+
+body {
+  background: green;
+  max-width: 100vw;
+}
+
+nav{
+
+
+ 
+ width: 100px;
+ height: 100px;
+ background-color: red;
+ animation-name: example;
+ animation-duration: 4s;
+  background: rgb(255, 255, 255);
+  width: 100vw;
+  position: fixed;
+  display: inline;
+  border-bottom: solid 4px #bbb;
+}
+
+ li{
+   color: blue;
+    display: inline;
+ }
+
+#clipboard, #clipboard2 {
+  width: 100px;
+  height: 100px;
+  
+}
+
+h1 {
+   text-shadow: 0 1px 0 #ccc,
+                0 2px 0 #c9c9c9,
+                0 3px 0 #bbb,
+                0 4px 0 #b9b9b9,
+                0 5px 0 #aaa,
+                0 6px 1px rgba(0,0,0,.1),
+                0 0 5px rgba(0,0,0,.1),
+                0 1px 3px rgba(0,0,0,.3),
+                0 3px 5px rgba(0,0,0,.2),
+                0 5px 10px rgba(0,0,0,.25),
+                0 10px 10px rgba(0,0,0,.2),
+                0 20px 20px rgba(0,0,0,.15);
+  text-decoration: underline;
+  color: black;
+  font: bold 4em 'Oswald';
+  margin: 1.25% 0;
+  margin-left: 3%;
+  max-width: 100vw;
+  float: left;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0,.5);
+}
+.content {
+  
+  margin-top: 10%;
+  text-align: center;
+  
+}
+
+
+#chores {
+  
+  width: 1000px;
+  font: italic 200 2.5em 'Lato', sans-serif;
+  margin-left: auto ;
+  margin-right: auto ;
+  background: rgba(77, 151, 204, 0.6);
+  text-align: center;
+  max-width: 100vw;
+  padding: 1%;
+  margin-top: 8%;
+}
+#chores {
+  background: rgba(255, 255, 255, .5);
+  border: solid 2px black;
+  color: black;
+  text-align: center;
+  width: 40%;
+  margin: 10% 30% 2% 30%;
+  font: bold 2em 'Roboto', sans-serif;
+  padding: 4% 2%;
+}
+
+#a_chore {
+  border: solid 2px green;
+  border-radius: 30px;
+  padding-bottom: 2%;
+}
+
+.text{
+  color:black;
+  font-size: .75em;
+  width: 25%%;
+}
+
+.submit {
+   border-radius: 30px;
+  font-family: 'Oswald' sans-serif;
+  color: black;
+  padding: 1vh 4vw;
+  background: none;
+  text-align: center;
+  font-size: 2em;
+  border: solid 6px rgba(0,0,0,.2);
+  margin: none;
+}
+
+.submit:hover {
+  border-radius: 25px;
+  padding: 1vh 4vw;
+  background: #4CAF50;
+  border: solid 6px #4CAF50;
+  margin: 0;
+}
+
+
+#sign_up_link {
+  color: white;
+  background-color: rgb(205, 202, 0);
+  border-color: #357ebd;
+  font: bold 2em 'Oswald';
+  float: right;
+  margin: 1.25% 0;
+  margin-right: 3%;
+  padding: 1%;
+  border-radius: 10px;
+  
+}
+
+#add_kid_link:hover {
+  
+  color: green;
+  background-color: rgb(153, 184, 147);
+}
+#add_chore_link:hover {
+  color: green;
+  background-color: rgb(153, 184, 147);
+}

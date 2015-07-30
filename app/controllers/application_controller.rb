@@ -1,7 +1,7 @@
-
 require './config/environment'
-require './app/models/tweet'
-require './app/models/user'
+require './app/models/chore'
+require './app/models/kid'
+require './app/models/parent'
 require 'pry'
 
 class ApplicationController < Sinatra::Base
@@ -10,33 +10,38 @@ class ApplicationController < Sinatra::Base
     set :public_folder, 'public'
     set :views, 'app/views'
   end
-
+  
   get '/' do
-    @tweets = Tweet.all
-    @users = User.all
+    @kids = Kid.all
+    @chores = Chore.all
     erb :index
   end
-
-  get '/tweet' do
-    @users = User.all
-    erb :tweet
+  
+  get '/add_kid' do  
+    erb :add_kid  #used to be sign_up
   end
-
-  post '/tweet' do
-    tweet = Tweet.new(:user_id => params[:user_id], :status => params[:status])
-    tweet.save
+  
+  post '/add_kid' do
+    @kid = Kid.create(:name => params[:kidname])
     redirect '/'
   end
-
-  get '/users' do
-    @users = User.all
-    erb :users
+  
+  get '/add_chore' do  
+    erb :add_chore  #used to be sign_up
   end
-
-  post '/sign-up' do
-    @user = User.new(:name => params[:name], :email => params[:email])
-    @user.save
+  
+  post '/add_chore' do
+    @chore = Chore.create(:name => params[:chorename])
     redirect '/'
+  end
+  
+  get '/results' do
+    erb :results
+  end
+  
+  post '/results' do
+    @kids = Kid.all
+    erb :results
   end
   
 end
