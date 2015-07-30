@@ -1,12 +1,14 @@
 <nav>
+  
   <li><h1> ChoreTracker </h1>
   <img id="clipboard2" src="images/clipboard.png">
-  
+  </li>
 </nav>
-   
+
+
 
 <form class="content" id="send_kid" action="/kid" method="POST">
-<li><a href='/add_kid'>
+  <li><a href='/add_kid'>
      <div id="add_kid_link">
       
        <img src="images/pencil.png"><p style="font: 2em 'Oswald', sans-serif;"> Add kid to choretracker
@@ -23,9 +25,9 @@
       
      </div></a>
   </li>
-  <br>
+ 
 </form>
-  <h2> create or find chore: </h2>
+  <h2> </h2>
   
   
  <form class="content" action="/results" method="POST"> 
@@ -66,7 +68,8 @@
   </p>
 
   <input class="submit" type="submit" class="btn btn-primary">  
- </form>
+</form>
+
   <br>
   <br>
   <br>
@@ -84,3 +87,10 @@
   <br>
   <br>
   <br>
+<h2>
+<form>
+<a href='/sign-in'> sign in
+
+</form>
+</h2>
+<%= @user.name %>
